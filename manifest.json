@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "video-downloader",
+  "version": "1.0",
+  "description": "Utility Tool to download videos from webpage",
+  "permissions": ["storage", "activeTab"],
+ 
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "images/icon-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+       "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["src/content.ts"]
+    }
+  ]
+}
